@@ -12,18 +12,20 @@ private:
     int tamano;
 
 public:
-    Recipiente(T* elementos, int size) : arreglo(elementos), tamano(size) {}
-
-    T getElemento(int indice) const {
-        return arreglo[indice];
+    Recipiente(T* n, int ta) : arreglo(n),tamano(ta){}
+    T getN(int a) const 
+    {
+        return arreglo[a];
     }
-    void setElemento(int indice, const T& elemento) {
-        arreglo[indice] =elemento;
+    void setN(int a, const T& elemento) 
+    {
+        arreglo[a] =elemento;
     }
-    int getTamano() const {
+    int getTa() const 
+    {
         return tamano;
     }
-    void imprimirElementos() const 
+    void imprimir() const 
     {
         for (int i = 0; i < tamano; ++i) 
         {
@@ -37,11 +39,11 @@ int main()
 {
     int enteros[] = {15, 12, 9, 3, 0};
     Recipiente<int> recipienteEnteros(enteros, 5);
-    recipienteEnteros.imprimirElementos();
+    recipienteEnteros.imprimir();
 
     string cadenas[] = {"Laboratorio", "9", "*carita asustada*"};
     Recipiente<string> recipienteCadenas(cadenas, 3);
-    recipienteCadenas.imprimirElementos();
+    recipienteCadenas.imprimir();
 
     return 0;
 }
