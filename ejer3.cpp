@@ -36,10 +36,9 @@ public:
 
 int main() 
 {
-    int enteros[] = {15, 12, 9, 3, 0};
-    Recipiente<int> recipienteEnteros(enteros, 5);
+    int num[] ={15, 12, 9, 3, 0};
+    Recipiente<int> recipienteEnteros(num, 5);
     recipienteEnteros.imprimir();
-
     string cadenas[] = {"Laboratorio", "9", "*carita asustada*"};
     Recipiente<string> recipienteCadenas(cadenas, 3);
     recipienteCadenas.imprimir();
